@@ -7,10 +7,7 @@
     <title>Vite App</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <style>
       body {
@@ -18,8 +15,27 @@
       }
     </style>
   </head>
-  <body class="bg-gray-800">
-
+  <body class="bg-indigo-600">
+    <div class="h-screen flex items-center justify-center">
+      <div class="bg-white rounded-xl shadow-lg w-[1300px] flex p-2">
+        <div class="w-[30%] bg-indigo-300 bg-opacity-25 px-10 flex items-center justify-start flex-col rounded-tl-xl rounded-bl-xl">
+          <div class="transform -translate-y-10"><img src="/images/image.jpg" class="w-[320px] h-[150px] object-cover rounded-xl" alt="image" /></div>
+          <div class="transform -translate-y-6">
+            <div>
+              <h2 class="font-bold text-2xl">Online workshop</h2>
+              <span class="font-normal text-indigo-500 text-sm">WITH SOME ONE</span>
+            </div>
+            <p class="my-10">Tailwind CSS for production-grade web applications.</p>
+            <div class="border border-gray-300 rounded-lg p-5">
+              <div class="flex items-start gap-4 text-black mb-4"><i class="mt-1 fa-regular fa-clock opacity-50"></i> 2 hours</div>
+              <div class="flex items-start gap-4 text-black"><i class="mt-1 fa-solid fa-video opacity-50"></i> Link to video conference will be provided upon confirmation</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-[40%]"></div>
+        <div class="w-[30%]"></div>
+      </div>
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>
