@@ -15,47 +15,120 @@
       }
     </style>
   </head>
-  <body class="bg-indigo-600">
-    <div class="h-screen flex items-center justify-center">
-      <div class="bg-white rounded-xl shadow-lg w-[1300px] grid grid-cols-3 gap-4 p-2">
-        <div class="bg-indigo-300 bg-opacity-25 px-10 flex items-center justify-start flex-col rounded-tl-xl rounded-bl-xl">
-          <div class="transform -translate-y-10 w-[320px] h-[150px] overflow-hidden rounded-xl"><img src="/images/image.jpg" class="transfrom hover:scale-[1.2] hover:rotate-2 transition-all w-full h-full object-cover" alt="image" /></div>
-          <div class="transform -translate-y-6">
-            <div>
-              <h2 class="font-bold text-2xl">Online workshop</h2>
-              <span class="font-normal text-indigo-500 text-sm">WITH SOME ONE</span>
-            </div>
-            <p class="my-10">Tailwind CSS for production-grade web applications.</p>
-            <div class="border border-gray-300 rounded-lg p-5">
-              <div class="flex items-start gap-4 text-black mb-4"><i class="mt-1 fa-regular fa-clock opacity-50"></i> 2 hours</div>
-              <div class="flex items-start gap-4 text-black"><i class="mt-1 fa-solid fa-video opacity-50"></i> Link to video conference will be provided upon confirmation</div>
-            </div>
-          </div>
-        </div>
-        <div class="pt-5">
-          <div>
-            <h2 class="font-medium text-2xl">Select a date and time</h2>
-          </div>
-          <!-- Calendar -->
 
-          <div class="grid grid-cols-7 gap-2 justify-items-center" id="days">
-            <div>SUN</div>
-            <div>MON</div>
-            <div>TUE</div>
-            <div>WED</div>
-            <div>THU</div>
-            <div>FRI</div>
-            <div>SAT</div>
+  <body class="bg-indigo-500 overflow-hidden relative">
+    <div class="h-screen flex items-center justify-center relative z-10">
+      <div class="container">
+        <div class="bg-white rounded-xl shadow-lg grid grid-cols-3 gap-4 min-h-[700px]">
+          <div class="p-2 max-lg:col-span-3">
+            <div class="h-full bg-indigo-300 bg-opacity-25 px-10 flex items-center justify-start flex-col rounded-tl-xl rounded-bl-xl">
+              <div class="transform -translate-y-10 w-[320px] h-[150px] overflow-hidden rounded-xl"><img src="/images/image.jpg" class="transfrom hover:scale-[1.2] hover:rotate-2 transition-all w-full h-full object-cover" alt="image" /></div>
+              <div class="transform -translate-y-6">
+                <div>
+                  <h2 class="font-bold text-2xl">Online workshop</h2>
+                  <span class="font-normal text-indigo-500 text-sm">WITH SOME ONE</span>
+                </div>
+                <p class="my-10">Tailwind CSS for production-grade web applications.</p>
+                <div class="border border-gray-300 rounded-lg p-5">
+                  <div class="flex items-start gap-4 text-black mb-4"><i class="mt-1 fa-regular fa-clock opacity-50"></i> 2 hours</div>
+                  <div class="flex items-start gap-4 text-black"><i class="mt-1 fa-solid fa-video opacity-50"></i> Link to video conference will be provided upon confirmation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-2 pt-5 overflow-hidden">
+            <h2 class="font-medium text-2xl mb-8">Select a date and time</h2>
+            <div class="grid grid-cols-2 gap-10 h-full">
+              <div class="max-lg:col-span-2">
+                <div class="flex justify-between items-center mb-6">
+                  <div class="text-lg font-medium">Feburary 2023</div>
+                  <div class="flex gap-1">
+                    <button class="bg-white border-gray-300 border rounded-full w-10 h-10 flex items-center justify-center"><i class="text-gray-300 fa-solid fa-angle-left"></i></button>
+                    <button class="bg-white border-gray-400 border rounded-full w-10 h-10 flex items-center justify-center"><i class="text-gray-400 fa-solid fa-angle-right"></i></button>
+                  </div>
+                </div>
+                <!-- Calendar -->
+                <div class="grid grid-cols-7 gap-2 justify-items-center" id="days">
+                  <div class="text-sm mb-6">SUN</div>
+                  <div class="text-sm mb-6">MON</div>
+                  <div class="text-sm mb-6">TUE</div>
+                  <div class="text-sm mb-6">WED</div>
+                  <div class="text-sm mb-6">THU</div>
+                  <div class="text-sm mb-6">FRI</div>
+                  <div class="text-sm mb-6">SAT</div>
+                  <!-- Days -->
+                </div>
+              </div>
+              <div class="max-lg:col-span-2 border-l px-8">
+                <div class="mb-6">
+                  <div class="text-lg font-medium">Monday, February 6, 2023</div>
+                </div>
+                <div class="flex flex-col gap-2 group">
+                  <label
+                    for="time"
+                    class="group-[.time-full]:bg-gray-200 group-[.time-full]:text-black time-btn rounded-md group overflow-hidden peer-checked:text-white peer-checked:bg-indigo-600 bg-indigo-200 text-indigo-500 py-2 font-medium cursor-pointer flex items-center justify-center gap-10"
+                  >
+                    <input class="hidden peer" type="radio" id="time" name="time" />
+                    <span class="transfrom peer-checked:translate-x-0 translate-x-full">1:00 PM</span>
+                    <button class="transfrom translate-x-40 peer-checked:translate-x-0 transition-all bg-indigo-200 text-indigo-600 px-4 py-1 rounded-md text-sm">Confirm</button>
+                  </label>
+                  <label
+                    for="time1"
+                    class="group-[.time-full]:bg-gray-200 group-[.time-full]:text-black time-btn rounded-md group overflow-hidden peer-checked:text-white peer-checked:bg-indigo-600 bg-indigo-200 text-indigo-500 py-2 font-medium cursor-pointer flex items-center justify-center gap-10"
+                  >
+                    <input class="hidden peer" type="radio" id="time1" name="time" />
+                    <span class="transfrom peer-checked:translate-x-0 translate-x-full">3:00 PM</span>
+                    <button class="transfrom translate-x-40 peer-checked:translate-x-0 transition-all bg-indigo-200 text-indigo-600 px-4 py-1 rounded-md text-sm">Confirm</button>
+                  </label>
+                  <label
+                    for="time2"
+                    class="group-[.time-full]:bg-gray-200 group-[.time-full]:text-black time-btn rounded-md group overflow-hidden peer-checked:text-white peer-checked:bg-indigo-600 bg-indigo-200 text-indigo-500 py-2 font-medium cursor-pointer flex items-center justify-center gap-10"
+                  >
+                    <input class="hidden peer" type="radio" id="time2" name="time" />
+                    <span class="transfrom peer-checked:translate-x-0 translate-x-full">5:00 PM</span>
+                    <button class="transfrom translate-x-40 peer-checked:translate-x-0 transition-all bg-indigo-200 text-indigo-600 px-4 py-1 rounded-md text-sm">Confirm</button>
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class=""></div>
       </div>
     </div>
+    <div class="absolute text-[30rem] bottom-[-250px] right-12 text-indigo-600" id="currentDay">15</div>
 
     <script>
+      let currentDay = document.querySelector("#currentDay");
+      currentDay.innerHTML = new Date().getDate();
       for (let index = 1; index < 32; index++) {
-        document.querySelector("#days").innerHTML += `<button class="w-10 h-10 rounded-full hover:bg-indigo-600 hover:text-white flex items-center justify-center">${index}</button>`;
+        document.querySelector("#days").innerHTML += `<button id="day-${index}" class="day relative ${index == new Date().getDate() ? "current-day" : ""} ${
+          index == 8 || index == 9 || index == 10 || index == 12 ? "locked-day" : ""
+        } font-medium w-10 h-10 rounded-full hover:bg-indigo-600 hover:text-white flex items-center justify-center transition-all">${index}</button>`;
       }
+      let days = document.querySelectorAll(".day");
+      days.forEach((day) => {
+        day.addEventListener("click", () => {
+          days.forEach((dy) => dy.classList.remove("selected-day"));
+          day.classList.toggle("selected-day");
+          currentDay.innerHTML = day.textContent;
+        });
+      });
+
+      let times = document.querySelectorAll(".time-btn");
+      times.forEach((time) => {
+        time.addEventListener("click", () => {
+          times.forEach((ty) => {
+            ty.classList.add("text-indigo-500");
+            ty.classList.remove("text-white");
+            ty.classList.remove("bg-indigo-600");
+            ty.classList.add("bg-indigo-200");
+          });
+          time.classList.remove("bg-indigo-200");
+          time.classList.remove("text-indigo-500");
+          time.classList.toggle("bg-indigo-600");
+          time.classList.add("text-white");
+        });
+      });
     </script>
     <script type="module" src="/main.js"></script>
   </body>
