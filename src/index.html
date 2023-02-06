@@ -17,9 +17,9 @@
   </head>
   <body class="bg-indigo-600">
     <div class="h-screen flex items-center justify-center">
-      <div class="bg-white rounded-xl shadow-lg w-[1300px] flex p-2">
-        <div class="w-[30%] bg-indigo-300 bg-opacity-25 px-10 flex items-center justify-start flex-col rounded-tl-xl rounded-bl-xl">
-          <div class="transform -translate-y-10"><img src="/images/image.jpg" class="w-[320px] h-[150px] object-cover rounded-xl" alt="image" /></div>
+      <div class="bg-white rounded-xl shadow-lg w-[1300px] grid grid-cols-3 gap-4 p-2">
+        <div class="bg-indigo-300 bg-opacity-25 px-10 flex items-center justify-start flex-col rounded-tl-xl rounded-bl-xl">
+          <div class="transform -translate-y-10 w-[320px] h-[150px] overflow-hidden rounded-xl"><img src="/images/image.jpg" class="transfrom hover:scale-[1.2] hover:rotate-2 transition-all w-full h-full object-cover" alt="image" /></div>
           <div class="transform -translate-y-6">
             <div>
               <h2 class="font-bold text-2xl">Online workshop</h2>
@@ -32,11 +32,31 @@
             </div>
           </div>
         </div>
-        <div class="w-[40%]"></div>
-        <div class="w-[30%]"></div>
+        <div class="pt-5">
+          <div>
+            <h2 class="font-medium text-2xl">Select a date and time</h2>
+          </div>
+          <!-- Calendar -->
+
+          <div class="grid grid-cols-7 gap-2 justify-items-center" id="days">
+            <div>SUN</div>
+            <div>MON</div>
+            <div>TUE</div>
+            <div>WED</div>
+            <div>THU</div>
+            <div>FRI</div>
+            <div>SAT</div>
+          </div>
+        </div>
+        <div class=""></div>
       </div>
     </div>
 
+    <script>
+      for (let index = 1; index < 32; index++) {
+        document.querySelector("#days").innerHTML += `<button class="w-10 h-10 rounded-full hover:bg-indigo-600 hover:text-white flex items-center justify-center">${index}</button>`;
+      }
+    </script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
