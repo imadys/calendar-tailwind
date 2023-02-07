@@ -7,13 +7,16 @@
     .selected-day {
         @apply bg-indigo-600 text-white relative;
     }
-    .locked-day{
+
+    .locked-day {
         @apply bg-indigo-200 text-indigo-600;
     }
-    .time-full{
+
+    .time-full {
         @apply blur-sm pointer-events-none
     }
 }
+
 .current-day::before {
     content: '';
     width: 4px;
@@ -22,4 +25,21 @@
     border-radius: 50%;
     background-color: currentColor;
     bottom: 6px;
+}
+
+@keyframes MOVE-BG {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(46px);
+    }
+}
+
+.moving-animation {
+    animation-name: MOVE-BG;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
