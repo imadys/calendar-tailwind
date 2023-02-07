@@ -4,14 +4,14 @@
 @tailwind utilities;
 
 @layer components {
-    .selected-day {
-        @apply bg-indigo-600 text-white relative;
-    }
+
 
     .locked-day {
         @apply bg-indigo-200 text-indigo-600;
     }
-
+    .selected-day {
+        @apply text-white relative bg-indigo-600 !important;
+    }
     .time-full {
         @apply blur-sm pointer-events-none
     }
