@@ -1,7 +1,8 @@
 export default{
     root:'src',
+    base: './',
     publicDir: 'public',
-    outDir: '/dist',
+    outDir: 'dist',
     server:{
         open: true
     }
