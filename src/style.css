@@ -41,7 +41,7 @@
 
 .moving-animation {
     animation-name: MOVE-BG;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
